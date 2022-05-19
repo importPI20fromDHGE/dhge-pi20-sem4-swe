@@ -1,0 +1,21 @@
+# action.yml
+name: 'Create PDF'
+description: 'Creates PDF files from github markdown'
+runs:
+  using: 'docker'
+  #image: 'docker://docker.pkg.github.com/mkrakowitzer/actions-makepdfs/makepdfs:latest'
+  image: 'docker://mkrakowitzer/actions-makepdfs:latest'
+
+inputs:
+  markdown_dir:
+    description: 'Location of markdown files in github repository'
+    required: true
+    default: ''
+  output_dir:
+    description: 'Location to output PDF files to'
+    required: true
+    default: 'tmp'
+
+branding:
+  icon: 'activity'
+  color: 'green'
