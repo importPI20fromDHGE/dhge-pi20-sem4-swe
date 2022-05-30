@@ -6,6 +6,8 @@ runs:
   #image: 'docker://docker.pkg.github.com/mkrakowitzer/actions-makepdfs/makepdfs:latest'
   image: 'docker://mkrakowitzer/actions-makepdfs:latest'
 
+on: push
+
 inputs:
   markdown_dir:
     description: 'Location of markdown files in github repository'
