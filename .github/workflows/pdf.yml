@@ -1,23 +1,29 @@
-# action.yml
-name: 'Create PDF'
-description: 'Creates PDF files from github markdown'
-runs:
-  using: 'docker'
-  #image: 'docker://docker.pkg.github.com/mkrakowitzer/actions-makepdfs/makepdfs:latest'
-  image: 'docker://mkrakowitzer/actions-makepdfs:latest'
+name: Docs to PDF
+# This workflow is triggered on pushes to the repository.
+on:
+  push:
+    branches:
+      - master
+    # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
+    paths:
+      - '**.md'
 
-on: push
-
-inputs:
-  markdown_dir:
-    description: 'Location of markdown files in github repository'
-    required: true
-    default: ''
-  output_dir:
-    description: 'Location to output PDF files to'
-    required: true
-    default: 'tmp'
-
-branding:
-  icon: 'activity'
-  color: 'green'
+jobs:
+  converttopdf:
+    name: Build PDF
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: baileyjm02/markdown-to-pdf@v1
+        with:
+          input_dir: docs
+          output_dir: pdfs
+          #images_dir: docs/images
+          # for example <img src="./images/file-name.png">
+         # image_import: ./images
+          # Default is true, can set to false to only get PDF files
+          build_html: false
+      - uses: actions/upload-artifact@v1
+        with:
+          name: docs
+          path: pdfs
