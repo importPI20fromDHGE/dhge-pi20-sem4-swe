@@ -9,7 +9,7 @@
 skinparam linetype ortho
 
 rectangle "Hallo spaces spaces" as A
-rectangle „spaces spaces moin spaces spaces“ as B
+rectangle "spaces spaces moin spaces spaces" as B
 
 A --> B
 
