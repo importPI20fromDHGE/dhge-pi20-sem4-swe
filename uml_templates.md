@@ -183,7 +183,7 @@ Bob <->o Alice
 @startuml
 activate Mensch
 Mensch -> Hund: erwerben(x,y,z)
-activate HUnd
+activate Hund
 Hund --> Mensch:
 |||
 Mensch -> Nahrung : erwerben(x,y,z)
