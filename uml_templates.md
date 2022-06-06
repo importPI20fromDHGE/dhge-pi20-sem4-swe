@@ -201,7 +201,7 @@ deactivate Hund
 @enduml
 ```
 
-![image](https://user-images.githubusercontent.com/105500704/169086133-9abec90c-6046-449e-bdda-8240ecebf8fb.png)
+![image](https://cdn.discordapp.com/attachments/922893958051418147/983343894152511498/VP313e8m44Jl_OezGW8_q0FXuC6B_aE5KKXqDTkj0k7Z5KKb4BrqadRcTNTohquqd8x65LfVdO8sO5zKvYMKPhGEN5g2t20xSDGaRTB5N__mR8Q3qZGRqzRqVJz1R5qbWG_q6_Esc57_m9v_MTe7g48u6XFnV0YpWbSvjn_q4cF9NrnNGy0KDKj2YNajmyrqyHnSFkgx0m00.png)
 
 ```
 @startuml
